@@ -73,23 +73,66 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5O3-F2-tvj">
+                                <rect key="frame" x="20" y="380.5" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="P5f-ce-Gmf"/>
+                                    <constraint firstAttribute="height" constant="100" id="uQF-yo-Brh"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change View Color &amp; Border Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcf-e1-SzB">
+                                <rect key="frame" x="136" y="422.5" width="202" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xcf-e1-SzB" secondAttribute="height" multiplier="263:21" id="Utn-ZA-0Hr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1H-LE-y8C" customClass="CircularProgressBarView" customModule="Some_Core_Animation" customModuleProvider="target">
+                                <rect key="frame" x="157" y="500.5" width="100" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcc-34-6Z6">
+                                        <rect key="frame" x="30.5" y="40" width="39.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Jcc-34-6Z6" firstAttribute="centerX" secondItem="M1H-LE-y8C" secondAttribute="centerX" id="Iq8-i9-JLk"/>
+                                    <constraint firstItem="Jcc-34-6Z6" firstAttribute="centerY" secondItem="M1H-LE-y8C" secondAttribute="centerY" id="ehp-NA-Bzs"/>
+                                    <constraint firstAttribute="height" constant="100" id="pDi-vn-Bvk"/>
+                                    <constraint firstAttribute="width" constant="100" id="xxl-ng-hIS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EOl-ir-FZW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="F4t-rn-HFB" firstAttribute="top" secondItem="EOl-ir-FZW" secondAttribute="top" constant="20" id="0Wg-rW-kyA"/>
                             <constraint firstItem="UT5-VK-5bd" firstAttribute="top" secondItem="bVN-Yv-e82" secondAttribute="bottom" constant="20" id="8TD-yD-C13"/>
+                            <constraint firstItem="xcf-e1-SzB" firstAttribute="centerY" secondItem="5O3-F2-tvj" secondAttribute="centerY" id="DI4-uf-rbD"/>
                             <constraint firstItem="UT5-VK-5bd" firstAttribute="centerX" secondItem="7KK-8h-Ahp" secondAttribute="centerX" id="DTh-Wr-q8R"/>
+                            <constraint firstItem="xcf-e1-SzB" firstAttribute="leading" secondItem="5O3-F2-tvj" secondAttribute="trailing" constant="16" id="MCe-Qd-apD"/>
+                            <constraint firstItem="5O3-F2-tvj" firstAttribute="top" secondItem="xUK-Rj-GS8" secondAttribute="bottom" constant="16" id="SPg-h3-hf4"/>
+                            <constraint firstItem="5O3-F2-tvj" firstAttribute="leading" secondItem="EOl-ir-FZW" secondAttribute="leading" constant="20" id="Yo5-6X-R8R"/>
+                            <constraint firstItem="M1H-LE-y8C" firstAttribute="centerX" secondItem="7KK-8h-Ahp" secondAttribute="centerX" id="aff-Nl-kri"/>
                             <constraint firstItem="F4t-rn-HFB" firstAttribute="leading" secondItem="EOl-ir-FZW" secondAttribute="leading" constant="20" id="dW8-S1-hTV"/>
                             <constraint firstItem="xUK-Rj-GS8" firstAttribute="top" secondItem="UT5-VK-5bd" secondAttribute="bottom" constant="10" id="fe8-1n-cGb"/>
                             <constraint firstItem="bVN-Yv-e82" firstAttribute="centerX" secondItem="7KK-8h-Ahp" secondAttribute="centerX" id="mZM-Y3-CMt"/>
                             <constraint firstItem="xUK-Rj-GS8" firstAttribute="centerX" secondItem="UT5-VK-5bd" secondAttribute="centerX" id="pzh-HT-au2"/>
                             <constraint firstItem="bVN-Yv-e82" firstAttribute="top" secondItem="F4t-rn-HFB" secondAttribute="bottom" constant="20" id="rog-uM-uqG"/>
+                            <constraint firstItem="M1H-LE-y8C" firstAttribute="top" secondItem="5O3-F2-tvj" secondAttribute="bottom" constant="20" id="yGu-yu-DUs"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="UIView" image="ruler" catalog="system" id="wQw-K8-8i5"/>
                     <connections>
+                        <outlet property="animatedCountingLabel" destination="Jcc-34-6Z6" id="09u-Fz-3e9"/>
                         <outlet property="blurImageView" destination="ONa-1b-XuR" id="nAE-hH-5tK"/>
+                        <outlet property="boderView" destination="5O3-F2-tvj" id="Nva-XD-xjY"/>
                         <outlet property="leadingConstraint" destination="dW8-S1-hTV" id="3ox-Lw-5yb"/>
                         <outlet property="menuButton" destination="bVN-Yv-e82" id="eDF-n6-foB"/>
                         <outlet property="redView" destination="F4t-rn-HFB" id="uIn-rK-xyN"/>
@@ -349,6 +392,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

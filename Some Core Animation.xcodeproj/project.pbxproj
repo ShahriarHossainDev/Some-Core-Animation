@@ -17,6 +17,7 @@
 		FA4D9D6729AF0E5100123FBD /* UIButtonExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D9D6629AF0E5100123FBD /* UIButtonExtenstion.swift */; };
 		FA4D9D6A29AF0E8F00123FBD /* ButtonSecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D9D6929AF0E8F00123FBD /* ButtonSecViewController.swift */; };
 		FA4D9D6C29AF129B00123FBD /* CoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D9D6B29AF129B00123FBD /* CoreViewController.swift */; };
+		FA4D9D6E29AF255A00123FBD /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D9D6D29AF255A00123FBD /* CircularProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FA4D9D6629AF0E5100123FBD /* UIButtonExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtenstion.swift; sourceTree = "<group>"; };
 		FA4D9D6929AF0E8F00123FBD /* ButtonSecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSecViewController.swift; sourceTree = "<group>"; };
 		FA4D9D6B29AF129B00123FBD /* CoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreViewController.swift; sourceTree = "<group>"; };
+		FA4D9D6D29AF255A00123FBD /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				FA4D9D6629AF0E5100123FBD /* UIButtonExtenstion.swift */,
+				FA4D9D6D29AF255A00123FBD /* CircularProgressBarView.swift */,
 			);
 			path = "Core View";
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				FA4D9D6A29AF0E8F00123FBD /* ButtonSecViewController.swift in Sources */,
 				FA4D9D6729AF0E5100123FBD /* UIButtonExtenstion.swift in Sources */,
+				FA4D9D6E29AF255A00123FBD /* CircularProgressBarView.swift in Sources */,
 				FA4D9D4D29AF081A00123FBD /* AppDelegate.swift in Sources */,
 				FA4D9D4F29AF081A00123FBD /* SceneDelegate.swift in Sources */,
 				FA4D9D6C29AF129B00123FBD /* CoreViewController.swift in Sources */,
