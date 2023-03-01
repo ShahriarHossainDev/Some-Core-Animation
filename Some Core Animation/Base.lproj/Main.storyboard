@@ -11,18 +11,93 @@
         <!--UIView-->
         <scene sceneID="3wX-n0-cZV">
             <objects>
-                <viewController id="cqb-nN-h1x" sceneMemberID="viewController">
+                <viewController id="cqb-nN-h1x" customClass="CoreViewController" customModule="Some_Core_Animation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7KK-8h-Ahp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4t-rn-HFB">
+                                <rect key="frame" x="20" y="64" width="100" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soccer_ball" translatesAutoresizingMaskIntoConstraints="NO" id="RGV-mk-WcA">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RGV-mk-WcA" secondAttribute="trailing" id="0dF-Oc-a5F"/>
+                                    <constraint firstAttribute="width" constant="100" id="6dH-Cg-SIR"/>
+                                    <constraint firstItem="RGV-mk-WcA" firstAttribute="leading" secondItem="F4t-rn-HFB" secondAttribute="leading" id="SRM-a1-Vxu"/>
+                                    <constraint firstAttribute="height" constant="100" id="eSQ-Ak-3sS"/>
+                                    <constraint firstAttribute="bottom" secondItem="RGV-mk-WcA" secondAttribute="bottom" id="l7W-Ze-gRF"/>
+                                    <constraint firstItem="RGV-mk-WcA" firstAttribute="top" secondItem="F4t-rn-HFB" secondAttribute="top" id="oy5-sv-Cex"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVN-Yv-e82">
+                                <rect key="frame" x="182" y="184" width="50" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.36078431370000003" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="chv-o8-sHV"/>
+                                    <constraint firstAttribute="height" constant="30" id="nA2-YJ-TkD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Move">
+                                    <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveButtonPressed:" destination="cqb-nN-h1x" eventType="touchUpInside" id="1eh-up-4aS"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UT5-VK-5bd">
+                                <rect key="frame" x="103" y="234" width="208" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="ONa-1b-XuR">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="1Nu-QX-Q2p"/>
+                                            <constraint firstAttribute="width" constant="100" id="ZYt-Jd-pHd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="Dyb-1X-TO8">
+                                        <rect key="frame" x="108" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="CgL-eW-XWG"/>
+                                            <constraint firstAttribute="height" constant="100" id="rVt-o9-Pq9"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blur Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUK-Rj-GS8">
+                                <rect key="frame" x="163.5" y="344" width="87.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="EOl-ir-FZW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F4t-rn-HFB" firstAttribute="top" secondItem="EOl-ir-FZW" secondAttribute="top" constant="20" id="0Wg-rW-kyA"/>
+                            <constraint firstItem="UT5-VK-5bd" firstAttribute="top" secondItem="bVN-Yv-e82" secondAttribute="bottom" constant="20" id="8TD-yD-C13"/>
+                            <constraint firstItem="UT5-VK-5bd" firstAttribute="centerX" secondItem="7KK-8h-Ahp" secondAttribute="centerX" id="DTh-Wr-q8R"/>
+                            <constraint firstItem="F4t-rn-HFB" firstAttribute="leading" secondItem="EOl-ir-FZW" secondAttribute="leading" constant="20" id="dW8-S1-hTV"/>
+                            <constraint firstItem="xUK-Rj-GS8" firstAttribute="top" secondItem="UT5-VK-5bd" secondAttribute="bottom" constant="10" id="fe8-1n-cGb"/>
+                            <constraint firstItem="bVN-Yv-e82" firstAttribute="centerX" secondItem="7KK-8h-Ahp" secondAttribute="centerX" id="mZM-Y3-CMt"/>
+                            <constraint firstItem="xUK-Rj-GS8" firstAttribute="centerX" secondItem="UT5-VK-5bd" secondAttribute="centerX" id="pzh-HT-au2"/>
+                            <constraint firstItem="bVN-Yv-e82" firstAttribute="top" secondItem="F4t-rn-HFB" secondAttribute="bottom" constant="20" id="rog-uM-uqG"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="UIView" image="ruler" catalog="system" id="wQw-K8-8i5"/>
+                    <connections>
+                        <outlet property="blurImageView" destination="ONa-1b-XuR" id="nAE-hH-5tK"/>
+                        <outlet property="leadingConstraint" destination="dW8-S1-hTV" id="3ox-Lw-5yb"/>
+                        <outlet property="menuButton" destination="bVN-Yv-e82" id="eDF-n6-foB"/>
+                        <outlet property="redView" destination="F4t-rn-HFB" id="uIn-rK-xyN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVk-2w-vKu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207" y="-579"/>
+            <point key="canvasLocation" x="1205.7971014492755" y="-579.24107142857144"/>
         </scene>
         <!--Manu View Controller-->
         <scene sceneID="toE-LH-KeX">
@@ -42,7 +117,7 @@
             </objects>
             <point key="canvasLocation" x="337.68115942028987" y="-273.21428571428572"/>
         </scene>
-        <!--Button View Controller-->
+        <!--Button Animation-->
         <scene sceneID="j8N-Is-iWU">
             <objects>
                 <viewController id="qKS-0w-rnl" customClass="ButtonViewController" customModule="Some_Core_Animation" customModuleProvider="target" sceneMemberID="viewController">
@@ -161,7 +236,7 @@
                             <constraint firstItem="vz2-2J-U9P" firstAttribute="top" secondItem="iEL-E9-4dK" secondAttribute="top" constant="20" id="zgK-Zh-3vO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9VY-XF-oRu"/>
+                    <navigationItem key="navigationItem" title="Button Animation" id="9VY-XF-oRu"/>
                     <connections>
                         <outlet property="Rotationbtn" destination="rDc-bx-pgA" id="UtZ-dJ-pFu"/>
                         <outlet property="ballbtn" destination="0iq-dO-q7w" id="A0n-UG-NTZ"/>
@@ -264,6 +339,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="appstore" width="512" height="512"/>
         <image name="heart" width="64" height="64"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="ruler" catalog="system" width="128" height="57"/>
