@@ -13,6 +13,10 @@
 		FA4D9D5429AF081A00123FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4D9D5229AF081A00123FBD /* Main.storyboard */; };
 		FA4D9D5629AF081C00123FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4D9D5529AF081C00123FBD /* Assets.xcassets */; };
 		FA4D9D5929AF081C00123FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4D9D5729AF081C00123FBD /* LaunchScreen.storyboard */; };
+		FA4D9D6229AF0B3200123FBD /* ManuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D9D6129AF0B3200123FBD /* ManuViewController.swift */; };
+		FA4D9D6429AF0DEE00123FBD /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D9D6329AF0DEE00123FBD /* ButtonViewController.swift */; };
+		FA4D9D6729AF0E5100123FBD /* UIButtonExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D9D6629AF0E5100123FBD /* UIButtonExtenstion.swift */; };
+		FA4D9D6A29AF0E8F00123FBD /* ButtonSecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D9D6929AF0E8F00123FBD /* ButtonSecViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		FA4D9D5529AF081C00123FBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA4D9D5829AF081C00123FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA4D9D5A29AF081C00123FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA4D9D6129AF0B3200123FBD /* ManuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuViewController.swift; sourceTree = "<group>"; };
+		FA4D9D6329AF0DEE00123FBD /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		FA4D9D6629AF0E5100123FBD /* UIButtonExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtenstion.swift; sourceTree = "<group>"; };
+		FA4D9D6929AF0E8F00123FBD /* ButtonSecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSecViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		FA4D9D4B29AF081A00123FBD /* Some Core Animation */ = {
 			isa = PBXGroup;
 			children = (
+				FA4D9D6529AF0E3200123FBD /* Core View */,
+				FA4D9D6029AF086F00123FBD /* View */,
 				FA4D9D4C29AF081A00123FBD /* AppDelegate.swift */,
 				FA4D9D4E29AF081A00123FBD /* SceneDelegate.swift */,
-				FA4D9D5029AF081A00123FBD /* ViewController.swift */,
 				FA4D9D5229AF081A00123FBD /* Main.storyboard */,
 				FA4D9D5529AF081C00123FBD /* Assets.xcassets */,
 				FA4D9D5729AF081C00123FBD /* LaunchScreen.storyboard */,
 				FA4D9D5A29AF081C00123FBD /* Info.plist */,
 			);
 			path = "Some Core Animation";
+			sourceTree = "<group>";
+		};
+		FA4D9D6029AF086F00123FBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA4D9D6829AF0E7000123FBD /* Sub View */,
+				FA4D9D5029AF081A00123FBD /* ViewController.swift */,
+				FA4D9D6129AF0B3200123FBD /* ManuViewController.swift */,
+				FA4D9D6329AF0DEE00123FBD /* ButtonViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA4D9D6529AF0E3200123FBD /* Core View */ = {
+			isa = PBXGroup;
+			children = (
+				FA4D9D6629AF0E5100123FBD /* UIButtonExtenstion.swift */,
+			);
+			path = "Core View";
+			sourceTree = "<group>";
+		};
+		FA4D9D6829AF0E7000123FBD /* Sub View */ = {
+			isa = PBXGroup;
+			children = (
+				FA4D9D6929AF0E8F00123FBD /* ButtonSecViewController.swift */,
+			);
+			path = "Sub View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4D9D6A29AF0E8F00123FBD /* ButtonSecViewController.swift in Sources */,
+				FA4D9D6729AF0E5100123FBD /* UIButtonExtenstion.swift in Sources */,
 				FA4D9D5129AF081A00123FBD /* ViewController.swift in Sources */,
 				FA4D9D4D29AF081A00123FBD /* AppDelegate.swift in Sources */,
 				FA4D9D4F29AF081A00123FBD /* SceneDelegate.swift in Sources */,
+				FA4D9D6429AF0DEE00123FBD /* ButtonViewController.swift in Sources */,
+				FA4D9D6229AF0B3200123FBD /* ManuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

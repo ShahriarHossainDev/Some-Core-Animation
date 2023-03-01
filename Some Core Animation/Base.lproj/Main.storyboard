@@ -1,24 +1,299 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ZH-g5-cER">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--UIView-->
+        <scene sceneID="3wX-n0-cZV">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="cqb-nN-h1x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7KK-8h-Ahp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="EOl-ir-FZW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="UIView" image="ruler" catalog="system" id="wQw-K8-8i5"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rVk-2w-vKu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1207" y="-579"/>
+        </scene>
+        <!--Manu View Controller-->
+        <scene sceneID="toE-LH-KeX">
+            <objects>
+                <tabBarController id="2ZH-g5-cER" customClass="ManuViewController" customModule="Some_Core_Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nqn-5k-R71">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="36O-Ov-tBH" kind="relationship" relationship="viewControllers" id="Ce9-np-Dbx"/>
+                        <segue destination="cqb-nN-h1x" kind="relationship" relationship="viewControllers" id="nIu-f7-6ri"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVZ-Kd-7h7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="337.68115942028987" y="-273.21428571428572"/>
+        </scene>
+        <!--Button View Controller-->
+        <scene sceneID="j8N-Is-iWU">
+            <objects>
+                <viewController id="qKS-0w-rnl" customClass="ButtonViewController" customModule="Some_Core_Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gmS-RD-5sB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vz2-2J-U9P">
+                                <rect key="frame" x="147" y="108" width="120" height="597"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLE-8N-5be">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="39"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                        <state key="normal" title="Pulse">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pulsebutton:" destination="qKS-0w-rnl" eventType="touchUpInside" id="S7p-8l-eV3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOs-9w-H4A">
+                                        <rect key="frame" x="0.0" y="59" width="120" height="39"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                        <state key="normal" title="Flash">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="flashbutton:" destination="qKS-0w-rnl" eventType="touchUpInside" id="IG0-FD-ZZy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXf-yX-Rac">
+                                        <rect key="frame" x="0.0" y="118" width="120" height="39"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                        <state key="normal" title="Shake">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shakebutton:" destination="qKS-0w-rnl" eventType="touchUpInside" id="ao6-yC-NcW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53B-cq-AaZ">
+                                        <rect key="frame" x="0.0" y="177" width="120" height="39"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                        <state key="normal" title="Tada">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tadaButton:" destination="qKS-0w-rnl" eventType="touchUpInside" id="boc-gs-QY1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDc-bx-pgA">
+                                        <rect key="frame" x="0.0" y="236" width="120" height="39"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                        <state key="normal" title="Rotation">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="RotationButton:" destination="qKS-0w-rnl" eventType="touchUpInside" id="5O0-pG-9Kj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6q-42-XNe">
+                                        <rect key="frame" x="0.0" y="295" width="120" height="39"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                        <state key="normal" title="Swing">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="SwingButton:" destination="qKS-0w-rnl" eventType="touchUpInside" id="ygh-pU-pVK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sb-g7-8fw">
+                                        <rect key="frame" x="0.0" y="354" width="120" height="64"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" image="heart">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="heartbutton:" destination="qKS-0w-rnl" eventType="touchUpInside" id="MTn-2c-eMa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iq-dO-q7w">
+                                        <rect key="frame" x="0.0" y="438" width="120" height="100"/>
+                                        <state key="normal" image="soccer_ball"/>
+                                        <connections>
+                                            <action selector="ballbutton:" destination="qKS-0w-rnl" eventType="touchUpInside" id="21o-Gv-yjc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2g-gB-svP">
+                                        <rect key="frame" x="0.0" y="558" width="120" height="39"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="KrJ-zI-7Rb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                        <state key="normal" title="Next View">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="NextButton:" destination="qKS-0w-rnl" eventType="touchUpInside" id="gR4-aN-iJH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iEL-E9-4dK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vz2-2J-U9P" firstAttribute="centerX" secondItem="gmS-RD-5sB" secondAttribute="centerX" id="9Ey-4S-Luz"/>
+                            <constraint firstItem="vz2-2J-U9P" firstAttribute="top" secondItem="iEL-E9-4dK" secondAttribute="top" constant="20" id="zgK-Zh-3vO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9VY-XF-oRu"/>
+                    <connections>
+                        <outlet property="Rotationbtn" destination="rDc-bx-pgA" id="UtZ-dJ-pFu"/>
+                        <outlet property="ballbtn" destination="0iq-dO-q7w" id="A0n-UG-NTZ"/>
+                        <outlet property="heartbtn" destination="9Sb-g7-8fw" id="AvR-W0-On7"/>
+                        <outlet property="nextbtn" destination="i2g-gB-svP" id="0jy-H7-hLW"/>
+                        <outlet property="onebutton" destination="yLE-8N-5be" id="MRS-56-025"/>
+                        <outlet property="swingbtn" destination="r6q-42-XNe" id="Rri-O9-XrO"/>
+                        <outlet property="tadabtn" destination="53B-cq-AaZ" id="wiv-gt-NM4"/>
+                        <outlet property="threebutton" destination="qXf-yX-Rac" id="TGb-SZ-VRV"/>
+                        <outlet property="twobutton" destination="cOs-9w-H4A" id="ZDd-wW-ULe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgE-xw-Uf2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-849.27536231884062" y="81.696428571428569"/>
+        </scene>
+        <!--Button Sec View Controller-->
+        <scene sceneID="kK0-yT-icp">
+            <objects>
+                <viewController storyboardIdentifier="secVC" id="cpe-td-Ci1" customClass="ButtonSecViewController" customModule="Some_Core_Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gwe-ye-bG2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0QV-TV-4g5">
+                                <rect key="frame" x="20" y="64" width="150" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKv-ae-ktO">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="DFF-ZH-fS6"/>
+                                            <constraint firstAttribute="height" constant="50" id="QCK-z0-qul"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                        <state key="normal" title="Button 1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72c-jO-75f">
+                                        <rect key="frame" x="0.0" y="80" width="150" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="sqg-cG-cAY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                        <state key="normal" title="Button 2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jb-UA-N83">
+                                        <rect key="frame" x="0.0" y="160" width="150" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0fF-9u-c6w"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                        <state key="normal" title="Button 3">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5bq-Cg-may"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0QV-TV-4g5" firstAttribute="top" secondItem="5bq-Cg-may" secondAttribute="top" constant="20" id="vPG-x9-3o9"/>
+                            <constraint firstItem="0QV-TV-4g5" firstAttribute="leading" secondItem="5bq-Cg-may" secondAttribute="leading" constant="20" id="wwn-85-ybN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttone" destination="uKv-ae-ktO" id="9Xi-Cc-XWH"/>
+                        <outlet property="buttontre" destination="6jb-UA-N83" id="7sR-sm-zMx"/>
+                        <outlet property="buttontwo" destination="72c-jO-75f" id="1to-Uh-5BK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1f-TG-koJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-849" y="773"/>
+        </scene>
+        <!--UIButton-->
+        <scene sceneID="Sss-gL-o57">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="36O-Ov-tBH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="UIButton" image="play.circle" catalog="system" id="XFU-l8-f4h"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sbp-k2-M9S">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qKS-0w-rnl" kind="relationship" relationship="rootViewController" id="ZOp-Om-NuY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vpW-ez-ARY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1759.4202898550725" y="81.696428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" width="64" height="64"/>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
+        <image name="ruler" catalog="system" width="128" height="57"/>
+        <image name="soccer_ball" width="100" height="100"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
